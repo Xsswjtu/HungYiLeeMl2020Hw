@@ -35,7 +35,7 @@ def normal(X):
 # In[5]:
 
 
-from LinearRegressionModel import LinearRegreesionModel
+from Hw1.model.LinearRegressionModel import LinearRegreesionModel
 
 
 # In[6]:
@@ -88,7 +88,7 @@ import pandas as pd
 # In[ ]:
 
 
-df = pd.read_csv('test.csv',header=None)
+df = pd.read_csv('date/test.csv', header=None)
 df[df=='NR'] = 0
 df.drop([0,1],axis=1,inplace=True)
 # df.head(18)
