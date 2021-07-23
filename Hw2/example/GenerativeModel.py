@@ -66,7 +66,7 @@ class LogisticRegressionModel:
             if test_score > self.best_accuracy:
                 print(f'better accuracy found:{test_score}, model saved!')
                 self.best_accuracy = test_score
-                np.save('theta.npy',self.theta)
+                np.save('theta.npy', self.theta)
     
     def _score(self,X,y):
         if len(X) == 0:
