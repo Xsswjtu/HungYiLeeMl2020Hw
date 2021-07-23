@@ -4,7 +4,7 @@
 # In[1]:
 
 
-from DataReader import DataReader
+from Hw1.data.DataReader import DataReader
 
 dr = DataReader(hours=9)
 X,y = dr.data()
@@ -64,11 +64,11 @@ print('loss',train_loss_history[-1])
 # In[ ]:
 
 
-np.save('theta.npy',model.get_parameters())
+np.save('theta.npy', model.get_parameters())
 
-np.save('mu.npy',mu)
+np.save('mu.npy', mu)
 
-np.save('sigma.npy',std)
+np.save('sigma.npy', std)
 
 
 # In[ ]:
@@ -88,7 +88,7 @@ import pandas as pd
 # In[ ]:
 
 
-df = pd.read_csv('date/test.csv', header=None)
+df = pd.read_csv('../data/test.csv', header=None)
 df[df=='NR'] = 0
 df.drop([0,1],axis=1,inplace=True)
 # df.head(18)
